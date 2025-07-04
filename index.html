@@ -6,86 +6,239 @@
   <title>Lista de Regalos - Boda Ana & Ruddy</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Lora', serif;
-      background: linear-gradient(to bottom, #fafbff 0%, #f0f2ff 100%);
-      color: #333;
-      padding: 20px;
-      max-width: 800px;
+      background: linear-gradient(135deg, #fafbff 0%, #f0f2ff 40%, #e8ecff 100%);
+      color: #2c3e50;
+      padding: 40px 20px;
+      max-width: 900px;
       margin: auto;
+      min-height: 100vh;
+      line-height: 1.6;
     }
+    
+    /* Header elegante */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 40px 0;
+    }
+    
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: #9aa5d1;
-      text-align: center;
-      margin-bottom: 10px;
+      margin: 0 0 15px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
+    
+    .subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      color: #7986cb;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    
+    .thanks {
+      font-style: italic;
+      color: #5a6c7d;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    
+    /* Secciones mejoradas */
+    .section {
+      margin: 30px 0;
+      padding: 30px 0;
+    }
+    
     .section-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      color: #9aa5d1;
-      border-bottom: 2px solid #ccc;
-      margin-top: 40px;
-      margin-bottom: 15px;
-      padding-bottom: 5px;
+      font-size: 1.6rem;
+      color: #6b7cb5;
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg, #9aa5d1, #c5d1f0) 1;
+      margin: 0 0 25px 0;
+      padding-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
+      font-weight: 600;
     }
+    
     .icon {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       stroke: #9aa5d1;
       stroke-width: 2;
       fill: none;
       flex-shrink: 0;
+      padding: 4px;
+      background: rgba(154, 165, 209, 0.1);
+      border-radius: 8px;
     }
+    
+    /* Listas mejoradas */
     ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
+      padding-left: 0;
+      list-style: none;
     }
+    
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      padding-left: 30px;
+      position: relative;
+      color: #34495e;
+      font-size: 1.05rem;
     }
+    
+    ul li::before {
+      content: "•";
+      color: #9aa5d1;
+      font-size: 1.4rem;
+      position: absolute;
+      left: 12px;
+      top: -2px;
+    }
+    
+    ul li:hover {
+      color: #6b7cb5;
+      transform: translateX(5px);
+      transition: all 0.2s ease;
+    }
+    
+    /* Preferencias mejoradas */
     .preference {
       font-style: italic;
-      color: #666;
-      margin-bottom: 15px;
-      margin-left: 20px;
-    }
-    .account {
-      background: rgba(154, 165, 209, 0.08);
-      padding: 20px;
-      border-left: 5px solid #9aa5d1;
-      border-radius: 12px;
-      font-family: 'Montserrat', sans-serif;
-      margin-top: 40px;
-    }
-    .account p {
-      margin: 10px 0;
+      color: #7986cb;
+      margin: 20px 0;
+      padding: 15px 20px;
+      background: linear-gradient(135deg, rgba(154, 165, 209, 0.08) 0%, rgba(154, 165, 209, 0.04) 100%);
+      border-left: 4px solid #9aa5d1;
+      border-radius: 0 12px 12px 0;
       font-size: 1rem;
     }
-    .thanks {
+    
+    /* Información bancaria elegante */
+    .account {
+      margin-top: 60px;
+      padding: 50px 0;
       text-align: center;
-      font-style: italic;
-      color: #666;
-      margin-top: 30px;
+      position: relative;
+    }
+    
+    .account::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #9aa5d1, transparent);
+    }
+    
+    .account-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #9aa5d1;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .bank-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      color: #6b7cb5;
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    
+    .account-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #34495e;
+      font-weight: 700;
+      margin: 25px 0;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    }
+    
+    .account-details {
+      font-family: 'Lora', serif;
       font-size: 1.1rem;
+      color: #5a6c7d;
+      line-height: 1.8;
+      margin-top: 25px;
+    }
+    
+    .account-details strong {
+      color: #6b7cb5;
+      font-weight: 600;
+    }
+    
+    /* Detalles decorativos */
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #9aa5d1, transparent);
+    }
+    
+    .section {
+      position: relative;
+    }
+    
+    /* Responsive mejorado */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 15px;
+      }
+      
+      h1 {
+        font-size: 2.8rem;
+      }
+      
+      .section {
+        padding: 20px;
+      }
+      
+      .section-title {
+        font-size: 1.4rem;
+      }
+      
+      .icon {
+        width: 28px;
+        height: 28px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Lista de Regalos</h1>
-  <p class="thanks">¡Gracias por acompañarnos en esta nueva etapa!</p>
+  <div class="header">
+    <div class="subtitle">Ana & Ruddy</div>
+    <h1>Lista de Regalos</h1>
+    <p class="thanks">¡Gracias por acompañarnos en esta nueva etapa!</p>
+  </div>
 
   <div class="section">
     <h2 class="section-title">
-      <!-- Feather bed icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" >
-        <path d="M2 12v5a3 3 0 003 3h14a3 3 0 003-3v-5" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="6" y="8" width="12" height="4" rx="1" ry="1" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6 12V7a3 3 0 016 0v5M14 12V7a3 3 0 016 0v5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Icono de cama -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M3 20v-8a2 2 0 012-2h14a2 2 0 012 2v8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 10V6a2 2 0 012-2h10a2 2 0 012 2v4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Dormitorio
     </h2>
@@ -108,11 +261,12 @@
 
   <div class="section">
     <h2 class="section-title">
-      <!-- Feather coffee icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" >
-        <path d="M8 2h8a4 4 0 010 8H8z" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M8 10v10a4 4 0 004 4h0a4 4 0 004-4V10" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="16" y1="6" x2="20" y2="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Icono de utensilios de cocina -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 2v20" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 15v7" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Cocina / Comedor
     </h2>
@@ -133,9 +287,14 @@
 
   <div class="section">
     <h2 class="section-title">
-      <!-- Feather droplet icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" >
-        <path d="M12 2C12 2 18 8 18 13a6 6 0 01-12 0c0-5 6-11 6-11z" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Icono de ducha -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M9 2v3h6V2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 5H9a2 2 0 00-2 2v2h10V7a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 9v13h10V9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 13v6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 13v6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 13v6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Baño
     </h2>
@@ -155,10 +314,16 @@
 
   <div class="section">
     <h2 class="section-title">
-      <!-- Feather broom icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" >
-        <path d="M3 17l6-6 4 4 6-6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M21 15v4a2 2 0 01-2 2h-6l-4-4" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Icono de spray de limpieza -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M6 4h2a2 2 0 012 2v2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 4h2a2 2 0 012 2v12a2 2 0 01-2 2h-2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 8h4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 12h4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 16h4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 8v12a2 2 0 002 2h2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 8l3-3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 5l-1 1" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Lavado y limpieza
     </h2>
@@ -180,10 +345,13 @@
 
   <div class="section">
     <h2 class="section-title">
-      <!-- Feather home icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" >
-        <path d="M3 9l9-7 9 7" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M9 22V12h6v10" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Icono de sofá -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 11v5a2 2 0 002 2h16a2 2 0 002-2v-5a2 2 0 00-2-2H4a2 2 0 00-2 2z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 18v2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 18v2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 4v5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Sala o zona común
     </h2>
@@ -197,9 +365,14 @@
 
   <div class="section">
     <h2 class="section-title">
-      <!-- Feather zap icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" >
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Icono de enchufe/electrodomésticos -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
+        <rect x="7" y="7" width="10" height="12" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 7V4a1 1 0 011-1h2a1 1 0 011 1v3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 19v2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 19v2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 13h6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 16h6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Electrodomésticos
     </h2>
@@ -219,10 +392,13 @@
   </div>
 
   <div class="account">
-    <p><strong>Cuenta de Ahorro en Común - Banreservas</strong></p>
-    <p><strong>9608440670</strong></p>
-    <p>A nombre de: Ruddy A. Crispín y Ana Y. Rosario</p>
-    <p>Numero de telefono: +1 (829) 635-6058</p>
+    <div class="account-title">Información Bancaria</div>
+    <div class="bank-name">Banreservas - Cuenta de Ahorro en Común</div>
+    <div class="account-number">9608440670</div>
+    <div class="account-details">
+      <strong>A nombre de:</strong> Ruddy A. Crispín y Ana Y. Rosario<br>
+      <strong>Teléfono:</strong> +1 (829) 635-6058
+    </div>
   </div>
 </body>
 </html>
